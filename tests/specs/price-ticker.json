@@ -1,19 +1,15 @@
 [
   {
-    "name": "/price",
+    "name": "/price on empty watchlist shows empty state",
     "steps": [
       {
+        "send": { "text": "/price" },
         "expect": [
           {
             "method": "sendMessage",
-            "payload": {
-              "text": "Request current price for specific coin or full watchlist"
-            }
+            "payload": { "text": "Your watchlist is empty.\n\nAdd some coins first, then check their prices here." }
           }
-        ],
-        "send": {
-          "text": "/price"
-        }
+        ]
       }
     ]
   }

@@ -1,19 +1,15 @@
 [
   {
-    "name": "/remove",
+    "name": "/remove without argument on empty watchlist shows empty state",
     "steps": [
       {
+        "send": { "text": "/remove" },
         "expect": [
           {
             "method": "sendMessage",
-            "payload": {
-              "text": "Remove a coin from watchlist"
-            }
+            "payload": { "text": "Your watchlist is empty — nothing to remove.\n\nTap ➕ Add coin to track your first one." }
           }
-        ],
-        "send": {
-          "text": "/remove"
-        }
+        ]
       }
     ]
   }

@@ -1,19 +1,15 @@
 [
   {
-    "name": "/admin",
+    "name": "/admin from non-owner shows restricted message",
     "steps": [
       {
+        "send": { "text": "/admin" },
         "expect": [
           {
             "method": "sendMessage",
-            "payload": {
-              "text": "Owner-only metrics dashboard (users, active alerts, top tickers)"
-            }
+            "payload": { "text": "This command is restricted to the bot owner." }
           }
-        ],
-        "send": {
-          "text": "/admin"
-        }
+        ]
       }
     ]
   }

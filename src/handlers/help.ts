@@ -2,15 +2,23 @@ import { Composer } from "grammy";
 import type { Ctx } from "../bot.js";
 import { inlineButton, inlineKeyboard } from "../toolkit/index.js";
 
-// /help — plain-language explanation for non-technical users. This bot is
-// button-driven: tell the user to tap /start to open the menu rather than listing
-// slash commands. The same text is shown when the user taps the Help button on the
-// main menu (`menu:help`). Enhance the copy for your specific bot; keep it short.
 const composer = new Composer<Ctx>();
 
 const HELP =
-  "ℹ️ Tap /start to open the menu, then pick what you want from the buttons.\n\n" +
-  "Everything in this bot is reachable by tapping — you don't need to remember any commands.";
+  "ℹ️ Crypto Watchlist bot\n\n" +
+  "Track crypto prices and get alerts when they hit your targets.\n\n" +
+  "How it works:\n" +
+  "• Tap ⏱ Price to see current prices\n" +
+  "• Tap 📋 My watchlist to manage tracked coins\n" +
+  "• Tap ➕ Add coin to start tracking a new one\n" +
+  "• Tap ⚙️ Settings to configure alerts and quiet hours\n\n" +
+  "Commands:\n" +
+  "/start — Open the main menu\n" +
+  "/help — Show this message\n" +
+  "/add BTC — Quick-add a coin\n" +
+  "/remove BTC — Quick-remove a coin\n" +
+  "/list — View your watchlist\n" +
+  "/price — Check current prices";
 
 const backToMenu = inlineKeyboard([[inlineButton("⬅️ Back to menu", "menu:main")]]);
 

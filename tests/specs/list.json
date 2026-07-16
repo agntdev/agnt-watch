@@ -1,19 +1,15 @@
 [
   {
-    "name": "/list",
+    "name": "/list on empty watchlist shows empty state",
     "steps": [
       {
+        "send": { "text": "/list" },
         "expect": [
           {
             "method": "sendMessage",
-            "payload": {
-              "text": "Show current watchlist with prices and per-coin actions"
-            }
+            "payload": { "text": "Your watchlist is empty.\n\nTap ➕ Add coin to track your first one." }
           }
-        ],
-        "send": {
-          "text": "/list"
-        }
+        ]
       }
     ]
   }

@@ -1,19 +1,15 @@
 [
   {
-    "name": "/add",
+    "name": "/add without argument shows prompt",
     "steps": [
       {
+        "send": { "text": "/add" },
         "expect": [
           {
             "method": "sendMessage",
-            "payload": {
-              "text": "Add a custom coin ticker to watchlist with validation"
-            }
+            "payload": { "text": "Which coin do you want to track?\n\nType the ticker symbol (e.g. BTC, ETH, SOL)." }
           }
-        ],
-        "send": {
-          "text": "/add"
-        }
+        ]
       }
     ]
   }

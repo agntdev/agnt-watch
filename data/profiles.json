@@ -1,0 +1,13 @@
+{
+  "1": {
+    "telegram_id": 1,
+    "display_name": "Test",
+    "timezone": "UTC",
+    "quiet_hours_start": 22,
+    "quiet_hours_end": 7,
+    "summary_time": "08:00",
+    "cooldown_length": 60,
+    "percent_alert_enabled": true,
+    "threshold_alert_enabled": true
+  }
+}

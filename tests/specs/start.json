@@ -7,7 +7,7 @@
         "expect": [
           {
             "method": "sendMessage",
-            "payload": { "text": "👋 Welcome! Tap a button below to get started." }
+            "payload": { "text": "👋 Welcome to Crypto Watchlist!\n\nTrack cryptocurrency prices and get alerts when they hit your targets.\n\nTap a button below to get started." }
           }
         ]
       }
